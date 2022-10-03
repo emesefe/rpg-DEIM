@@ -39,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 7179831
+    locked: 0
+  - name: Middleground
+    uniqueID: 1876126247
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 228706107
+    locked: 0
+  - name: Details
+    uniqueID: 4245702643
     locked: 0
