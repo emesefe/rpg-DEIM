@@ -8,6 +8,9 @@ public class GoToScene : MonoBehaviour
     public string sceneName = "New Scene name here";
     
     public bool isAutomatic;
+    
+    public string uuid; // uuid = universal unique identifier
+    
     private bool manualEnter;
     private void Update(){
         if (!isAutomatic && !manualEnter){
@@ -17,20 +20,19 @@ public class GoToScene : MonoBehaviour
     
     // Teleport automático
     private void OnTriggerEnter2D(Collider2D other){
-        if (other.name == "Player"){
-            if (isAutomatic)
-            {
-                SceneManager.LoadScene(sceneName);
-            }
-        }
+        Teleport(other.name);
     }
     
     // Teleport manual
     private void OnTriggerStay2D(Collider2D other){
-        if (other.name == "Player")
-        {
-            Debug.Log("Estoy en contacto con el teleport");
-            if (!isAutomatic && manualEnter){
+        Teleport(other.name);
+    }
+    
+    private void Teleport(string objName){
+        if (objName == "Player"){ 
+            if (isAutomatic || (!isAutomatic && manualEnter))
+            {
+                FindObjectOfType<PlayerController>().nextUuid = uuid;
                 SceneManager.LoadScene(sceneName);
             }
         }
