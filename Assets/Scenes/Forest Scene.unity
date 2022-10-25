@@ -108008,6 +108008,10 @@ PrefabInstance:
       value: Teleport
       objectReference: {fileID: 0}
     - target: {fileID: 212627369008214734, guid: 76a1414d5fbc5413b8bacbe6e1f7ae18, type: 3}
+      propertyPath: uuid
+      value: village forest path
+      objectReference: {fileID: 0}
+    - target: {fileID: 212627369008214734, guid: 76a1414d5fbc5413b8bacbe6e1f7ae18, type: 3}
       propertyPath: sceneName
       value: Village Scene
       objectReference: {fileID: 0}
