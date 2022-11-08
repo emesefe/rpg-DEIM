@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 87498280845984561}
   - component: {fileID: 4851499505180390434}
   - component: {fileID: 515626972}
+  - component: {fileID: 8804360541463207123}
   m_Layer: 6
   m_Name: Slime
   m_TagString: Enemy
@@ -163,9 +164,8 @@ MonoBehaviour:
   timeToMakeStep: 2
   hasRandomMove: 0
   enemyDirections:
-  - {x: 1, y: 1}
-  - {x: 1, y: -1}
-  - {x: -1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
 --- !u!114 &515626972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,3 +179,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToRevivePlayer: 2
+  damage: 10
+--- !u!114 &8804360541463207123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87498280845984572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633411555aaa84704b1f90a0d4ad9701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
