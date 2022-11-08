@@ -39526,10 +39526,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 87498280845984561, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 87498280845984572, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
       propertyPath: m_Name
       value: Slime
@@ -39540,11 +39536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 87498280845984574, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.5
+      value: 23.5
       objectReference: {fileID: 0}
     - target: {fileID: 87498280845984574, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 87498280845984574, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39576,6 +39572,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 87498280845984574, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851499505180390434, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
+      propertyPath: enemyDirections.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851499505180390434, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
+      propertyPath: enemyDirections.Array.data[0].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851499505180390434, guid: 841cfc16fdae04ea68449eb5e9468a30, type: 3}
+      propertyPath: enemyDirections.Array.data[1].x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
