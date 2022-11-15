@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
 
     private Rigidbody2D _rigidbody;
+
+    private bool isAttacking;
+    [SerializeField] private float attackTime;
+    private float attackTimeCounter;
     
     private void Awake(){
         _animator = GetComponent<Animator>();
@@ -38,26 +43,23 @@ public class PlayerController : MonoBehaviour
         yInput = Input.GetAxisRaw(VERTICAL);
         isWalking = false;
         
-        // Horizontal Movement
-        if (Mathf.Abs(xInput) > inputTol)
+        if (isAttacking){
+            attackTimeCounter -= Time.deltaTime;
+            if (attackTimeCounter < 0){
+                isAttacking = false;
+            }
+        }else if (Input.GetMouseButtonDown(0)){
+            isAttacking = true;
+            attackTimeCounter = attackTime;
+        } else
         {
-            _rigidbody.velocity = new Vector2(xInput * speed,
-                0);
-            isWalking = true;
-            lastDirection = new Vector2(xInput, 0);
-        }
-        // Vertical movement
-        if (Mathf.Abs(yInput) > inputTol){
-            _rigidbody.velocity = new Vector2(0,
-                yInput * speed);
-            isWalking = true;
-            lastDirection = new Vector2(0, yInput);
+            Movement();
         }
     }
 
     private void LateUpdate()
     {
-        if (!isWalking)
+        if (!isWalking || isAttacking)
         {
             _rigidbody.velocity = Vector2.zero;
         }
@@ -67,5 +69,27 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("LastHorizontal", lastDirection.x);
         _animator.SetFloat("LastVertical", lastDirection.y);
         _animator.SetBool("IsWalking", isWalking);
+        _animator.SetBool("IsAttacking", isAttacking);
+    }
+
+    private void Movement()
+    {
+        // Horizontal Movement
+        if (Mathf.Abs(xInput) > inputTol)
+        {
+            _rigidbody.velocity = new Vector2(xInput * speed,
+                0);
+            isWalking = true;
+            lastDirection = new Vector2(xInput, 0);
+        }
+
+        // Vertical movement
+        if (Mathf.Abs(yInput) > inputTol)
+        {
+            _rigidbody.velocity = new Vector2(0,
+                yInput * speed);
+            isWalking = true;
+            lastDirection = new Vector2(0, yInput);
+        }
     }
 }

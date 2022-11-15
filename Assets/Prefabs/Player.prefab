@@ -140,6 +140,7 @@ MonoBehaviour:
   speed: 5
   lastDirection: {x: 0, y: 0}
   nextUuid: 
+  attackTime: 1
 --- !u!95 &7462266634236662808
 Animator:
   serializedVersion: 4
@@ -292,6 +293,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8968479360849706734, guid: c38604ae0fc044006aeb38af5efafaa7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38604ae0fc044006aeb38af5efafaa7, type: 3}
 --- !u!4 &5718772293618832613 stripped
@@ -350,6 +355,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6512642079530955386, guid: a9a7920c98ec042b393868504d2086c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6512642079530955391, guid: a9a7920c98ec042b393868504d2086c6, type: 3}
       propertyPath: m_Name
       value: Sword
@@ -378,6 +387,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9110133229544774424, guid: 88b9e61211b4646c69d9c496ebed7593, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110133229544774429, guid: 88b9e61211b4646c69d9c496ebed7593, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9110133229544774430, guid: 88b9e61211b4646c69d9c496ebed7593, type: 3}
