@@ -158,3 +158,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   bloodParticle: {fileID: 7206196738254135422, guid: 5b2985cbd0ffe4a519b517ddf2779e6f, type: 3}
+  canvasDamageNumber: {fileID: 2458012745245824063, guid: a9a0f96b6b90f40ce88d70555b6d9c48, type: 3}

@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  canMove: 1
   lastDirection: {x: 0, y: 0}
   nextUuid: 
   attackTime: 1
@@ -233,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  blinkingDuration: 0
   currentHealth: 0
 --- !u!1001 &3687139040972335624
 PrefabInstance:

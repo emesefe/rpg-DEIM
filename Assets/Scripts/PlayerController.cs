@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
         VERTICAL = "Vertical";
 
     public static bool playerCreated;
+
+    public bool canMove = true;
     
     public Vector2 lastDirection;
 
@@ -36,12 +38,18 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerCreated = true;
+        lastDirection = Vector2.down;
     }
 
     void Update(){
         xInput = Input.GetAxisRaw(HORIZONTAL);
         yInput = Input.GetAxisRaw(VERTICAL);
         isWalking = false;
+
+        if (!canMove)
+        {
+            return;
+        }
         
         if (isAttacking){
             attackTimeCounter -= Time.deltaTime;

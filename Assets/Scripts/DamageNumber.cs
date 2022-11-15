@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,13 @@ public class DamageNumber : MonoBehaviour
     public float scaleFactor = 5f;
     public float damagePoints;
     public TextMeshProUGUI damageText;
-    
-    private void Update(){
+
+    private void Start()
+    {
         damageText.text = damagePoints.ToString();
+    }
+
+    private void Update(){
         transform.position = new Vector3(transform.position.x, 
             transform.position.y + verticalSpeed * Time.deltaTime, 
             0);

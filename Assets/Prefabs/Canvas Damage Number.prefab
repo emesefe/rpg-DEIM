@@ -118,7 +118,7 @@ MonoBehaviour:
   verticalSpeed: 1
   scaleFactor: 5
   damagePoints: 0
-  damageText: {fileID: 0}
+  damageText: {fileID: 8455160340539680913}
 --- !u!114 &-8397151702442385035
 MonoBehaviour:
   m_ObjectHideFlags: 0

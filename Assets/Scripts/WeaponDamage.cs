@@ -8,6 +8,7 @@ public class WeaponDamage : MonoBehaviour
 {
     public int damage;
     public GameObject bloodParticle;
+    public GameObject canvasDamageNumber;
 
     private GameObject hitPoint;
 
@@ -22,11 +23,15 @@ public class WeaponDamage : MonoBehaviour
         {
             other.gameObject.GetComponent<HealthManager>().
                 DamageCharacter(damage);
-            
+
             if (bloodParticle != null && hitPoint != null){
-                Destroy(Instantiate(bloodParticle, hitPoint.transform.position, 
-                    hitPoint.transform.rotation), 1.5f);
+                Instantiate(bloodParticle, hitPoint.transform.position, 
+                    hitPoint.transform.rotation);
             }
+            
+            GameObject canvas = Instantiate(canvasDamageNumber,
+                hitPoint.transform.position, Quaternion.identity);
+            canvas.GetComponent<DamageNumber>().damagePoints = damage;
         }
     }
 }
