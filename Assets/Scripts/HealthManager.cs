@@ -14,6 +14,14 @@ public class HealthManager : MonoBehaviour
 
     [SerializeField] private int currentHealth;
 
+    public int CurrentHealth
+    {
+        get
+        {
+            return currentHealth;
+        }
+    }
+
     private void Start()
     {
         UpdateMaxHealth(maxHealth);
