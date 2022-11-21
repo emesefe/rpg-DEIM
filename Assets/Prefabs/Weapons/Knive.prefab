@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.375
       objectReference: {fileID: 0}
+    - target: {fileID: 6512642079530955387, guid: a9a7920c98ec042b393868504d2086c6, type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6512642079530955391, guid: a9a7920c98ec042b393868504d2086c6, type: 3}
       propertyPath: m_Name
       value: Knive

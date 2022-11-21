@@ -7,6 +7,8 @@ using UnityEngine;
 public class WeaponDamage : MonoBehaviour
 {
     public int damage;
+    [Tooltip("Índice que ocupa el arma como hijo de Weapons")]
+    public int index;
     public GameObject bloodParticle;
     public GameObject canvasDamageNumber;
 
